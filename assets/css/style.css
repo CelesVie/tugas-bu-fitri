@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    background: #f7f7fa;
+    color: #222;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: bodyFadeIn 1s ease-out;
+}
+@keyframes bodyFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.logo {
+    height: 50px; /* bisa ubah ke 45px, 50px, 60px sesuai selera */
+    width: auto;
+    object-fit: contain;
+    margin-right: 8px;
+}
+.logo-container {
+    min-height: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7fa;
+    padding: 20px;
+}
+.logo-container img {
+    width: auto;
+    height: 80px;
+    max-width: 120px;
+    object-fit: contain;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+.logo-container img:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.container {
+    max-width: 420px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(60, 60, 60, 0.08);
+    padding: 40px 32px 32px 32px;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: fadeSlideIn 0.8s cubic-bezier(0.77, 0, 0.18, 1) 0.1s forwards;
+}
+h2 {
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    color: #222;
+}
+.form-label {
+    font-weight: 500;
+    color: #444;
+}
+.form-control {
+    border-radius: 14px;
+    border: 1px solid #e0e0e0;
+    background: #f9f9fb;
+    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, border-color 0.2s, background 0.3s;
+    will-change: box-shadow, border-color, background;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 2px #b3b3b3;
+    border-color: #b3b3b3;
+}
+.btn-primary {
+    background: #222;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(60, 60, 60, 0.08);
+    transition: background 0.2s, box-shadow 0.2s,
+    transform 0.25s cubic-bezier(0.77, 0, 0.18, 1);
+    will-change: background, box-shadow, transform;
+}
+.btn-primary:hover {
+    background: #444;
+    box-shadow: 0 4px 16px rgba(60, 60, 60, 0.12);
+    transform: translateY(-2px) scale(1.02);
+}
+.btn-outline-primary {
+    border-radius: 16px;
+    font-weight: 500;
+    padding: 7px 22px;
+    box-shadow: 0 2px 8px rgba(60, 60, 60, 0.06);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s cubic-bezier(0.77, 0, 0.18, 1);
+    will-change: background, box-shadow, transform;
+}
+.btn-outline-primary:hover {
+    background: #222;
+    border-color: #222;
+    box-shadow: 0 4px 16px rgba(60, 60, 60, 0.12);
+    transform: translateY(-2px) scale(1.02);
+}
+.btn,
+.form-control,
+.form-select {
+    transition: all 0.25s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.navbar {
+    animation: navbarSlideDown 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+}
+@keyframes navbarSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.alert {
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    opacity: 0;
+    transform: translateY(-20px) scale(0.98);
+    animation: fadeSlideIn 0.7s cubic-bezier(0.77, 0, 0.18, 1) 0.2s forwards;
+}
+@keyframes fadeSlideIn {
+    from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    }
+}
+.table {
+    animation: tableFadeIn 0.8s cubic-bezier(0.77, 0, 0.18, 1) 0.3s forwards;
+    opacity: 0;
+}
+@keyframes tableFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 600px) {
+    .container {
+    padding: 24px 8px;
+    }
+}
