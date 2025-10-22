@@ -26,15 +26,17 @@ Form login guru/siswa, Apple style, Bootstrap 5
 </head>
 <body>
     <!-- Bagian body adalah isi utama halaman yang terlihat di browser -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg bg-white mb-4" style="box-shadow:0 4px 24px rgba(60,60,60,0.07);border-radius:0 0 22px 22px;transition:box-shadow 0.3s cubic-bezier(.77,0,.18,1);">
         <!-- Navbar adalah bilah navigasi di atas, menggunakan Bootstrap -->
-        <div class="container-fluid">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center" style="min-height:62px;">
             <!-- Container fluid agar navbar memenuhi lebar layar -->
-            <a class="navbar-brand" href="#">
-                <!-- Navbar brand biasanya untuk logo atau nama situs -->
+            <div class="navbar-brand mb-0 h1 d-flex align-items-center" style="font-weight:600;letter-spacing:-1px;font-size:1.25rem;transition:color 0.2s;">
+                <!-- Brand dengan logo -->
                 <img src="../assets/images/smkn5logo.png" alt="Logo Sekolah" class="logo">
-                <!-- Gambar logo sekolah, dengan class logo untuk styling -->
-            </a>
+                <!-- Logo -->
+                SMKN 5 Tangerang
+                <!-- Nama sekolah -->
+            </div>
         </div>
     </nav>
     <div class="container shadow-sm">
